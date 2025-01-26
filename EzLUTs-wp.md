@@ -45,7 +45,7 @@ O=I0^I1^I2^I3^I4
 O=I0^I1^I2^I3^I4^I5
 ```
 
-接下来分析最简单的 `[0]*[8421][0]*` 模式，相信你已经发现了，这类查找表展开成二进制的话，其中有且只有一位是“1”，其他全是“0”。
+接下来分析最简单的 `[0]*[8421][0]*` 模式，相信聪明的做题人已经发现了，这类查找表展开成二进制的话，其中有且只有一位是“1”，其他全是“0”。
 
 同样对所有这类 `INIT` 值进行去重，结果只有 14 种：
 ```verilog
@@ -163,16 +163,16 @@ O=~(I0)&~(I4)&~(I5)&(I1^I2^I3)
 ```
 
 回顾这四种模式，其实可以用统一的模型来表述：
-$$
+```math
 \text{O}=\neg \text{P}_1 \wedge \neg \text{P}_2\wedge\cdots\neg \text{P}_{n}\wedge\text{Q}_1\wedge \text{Q}_2\wedge\cdots \text{Q}_{m}
-$$
+```
 其中
-$$
+```
 \begin{array}{c}
 \text{P}_{i} = \text{I}_{p_{i,1}}\oplus\text{I}_{p_{i,2}}\oplus\cdots\\
 \text{Q}_{i} = \text{I}_{q_{i,1}}\oplus\text{I}_{q_{i,2}}\oplus\cdots\\
 \end{array}
-$$
+```
 为了把查找表解析成 POXOR（Product of Exclusive OR）的形式，我们可以写个脚本来处理。
 
 

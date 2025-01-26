@@ -167,7 +167,7 @@ O=~(I0)&~(I4)&~(I5)&(I1^I2^I3)
 \text{O}=\neg \text{P}_1 \wedge \neg \text{P}_2\wedge\cdots\neg \text{P}_{n}\wedge\text{Q}_1\wedge \text{Q}_2\wedge\cdots \text{Q}_{m}
 ```
 其中
-```
+```math
 \begin{array}{c}
 \text{P}_{i} = \text{I}_{p_{i,1}}\oplus\text{I}_{p_{i,2}}\oplus\cdots\\
 \text{Q}_{i} = \text{I}_{q_{i,1}}\oplus\text{I}_{q_{i,2}}\oplus\cdots\\
